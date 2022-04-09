@@ -1,0 +1,30 @@
+<div class="crew page-background"></div>
+
+<section-header number="02" text="Meet your crew"></section-header>
+
+<div class="content">
+  <div class="desktop-left">
+    <div class="display">
+      <img [src]="selectedCrew.images.png" [title]="selectedCrew.name" />
+    </div>
+  </div>
+
+  <div class="desktop-right">
+    <div class="page-nav">
+      <div class="nav">
+        <button
+          class="crew"
+          *ngFor="let crew of crews; index as i; trackBy: crewTrackBy"
+          [ngClass]="selectedIndex === i ? 'active' : ''"
+          (click)="setCrew(crew, i)"
+        ></button>
+      </div>
+    </div>
+
+    <div class="details">
+      <div class="crew-role">{{ selectedCrew.role }}</div>
+      <h2>{{ selectedCrew.name }}</h2>
+      <p>{{ selectedCrew.bio }}</p>
+    </div>
+  </div>
+</div>

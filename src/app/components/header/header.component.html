@@ -1,0 +1,13 @@
+<header>
+  <a class="logo" routerLink="/"><img [src]="logo" alt="Space Tourism" /></a>
+  <div class="decoration-line"></div>
+  <div class="navbar">
+    <navbar></navbar>
+  </div>
+  <button class="mobile-toggle" (click)="setToggle()">
+    <img [src]="!isToggled ? openToggle : closeToggle" alt="" />
+  </button>
+  <div [class]="setToggleClass()" *ngIf="isToggled">
+    <mobile-navbar></mobile-navbar>
+  </div>
+</header>

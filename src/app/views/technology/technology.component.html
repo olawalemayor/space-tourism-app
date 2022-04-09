@@ -1,0 +1,45 @@
+<div class="technology page-background"></div>
+
+<section-header number="03" text="Space launch 101"></section-header>
+
+<div class="flex-wrapper">
+  <div class="desktop-left">
+    <div class="display">
+      <img
+        class="landscape"
+        [src]="selectedTechnology.images.landscape"
+        [title]="selectedTechnology.name"
+      />
+      <img
+        class="portrait"
+        [src]="selectedTechnology.images.portrait"
+        [title]="selectedTechnology.name"
+      />
+    </div>
+  </div>
+
+  <div class="desktop-right">
+    <div class="page-nav">
+      <div class="nav">
+        <button
+          class="technology"
+          *ngFor="
+            let technology of technologies;
+            index as i;
+            trackBy: technologyTrackBy
+          "
+          [ngClass]="selectedIndex === i ? 'active' : ''"
+          (click)="setTechnology(technology, i)"
+        >
+          {{ i + 1 }}
+        </button>
+      </div>
+    </div>
+
+    <div class="details">
+      <span class="text">THE TERMINOLOGY...</span>
+      <h2>{{ selectedTechnology.name }}</h2>
+      <p>{{ selectedTechnology.description }}</p>
+    </div>
+  </div>
+</div>

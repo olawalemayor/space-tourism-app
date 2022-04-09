@@ -1,0 +1,47 @@
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    padding: 1.5rem 0;
+  }
+
+  a.active,
+  a:hover {
+    border-bottom: 3px solid #fff;
+  }
+
+  .link-decorator {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  a {
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+
+  .link-decorator {
+    display: inline;
+    font-weight: 700;
+    padding: 0.5rem;
+  }
+}

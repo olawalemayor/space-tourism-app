@@ -1,0 +1,37 @@
+nav {
+  margin: 8rem 0 0 2rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 2rem 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 98%;
+  display: block;
+}
+
+a.active,
+a:hover {
+  border-right: 3px solid #fff;
+}
+
+.link-decorator {
+  font-weight: 700;
+  padding: 0.5rem;
+}

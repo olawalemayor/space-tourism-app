@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --nav-font: "Barlow Condensed";
+  --nav-font-weight: 400;
+  /*Desktop*/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -9999;
+  background-repeat: no-repeat;
+}
+navbar {
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  navbar {
+    width: 60%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,48 @@
+<div class="destination page-background"></div>
+<div class="content">
+  <div class="desktop-left">
+    <section-header number="01" text="Pick your destination"></section-header>
+    <div class="display">
+      <img
+        [src]="selectedDestination.images.png"
+        [title]="selectedDestination.name"
+      />
+    </div>
+  </div>
+
+  <div class="desktop-right">
+    <div class="page-nav">
+      <div class="nav">
+        <button
+          class="destination"
+          *ngFor="
+            let destination of destinations;
+            index as i;
+            trackBy: destinationTrackBy
+          "
+          [ngClass]="selectedIndex === i ? 'active' : ''"
+          (click)="setDestination(destination, i)"
+        >
+          {{ destination.name }}
+        </button>
+      </div>
+    </div>
+
+    <div class="details">
+      <h2>{{ selectedDestination.name }}</h2>
+      <p>{{ selectedDestination.description }}</p>
+    </div>
+
+    <div class="extra">
+      <div class="detail-group">
+        <h5>AVG. DISTANCE</h5>
+        <span class="detail">{{ selectedDestination.distance }}</span>
+      </div>
+
+      <div class="detail-group">
+        <h5>EST. TRAVEL TIME</h5>
+        <span class="detail">{{ selectedDestination.travel }}</span>
+      </div>
+    </div>
+  </div>
+</div>
